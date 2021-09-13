@@ -1,0 +1,9 @@
+D:\University\2020-2021_2\Webes Alkalmazások\GY\Beadandók\Bead02\Bookstore\BookStore.Persistence\obj\Debug\netstandard2.1\Bookstore.Persistence.csprojAssemblyReference.cache
+D:\University\2020-2021_2\Webes Alkalmazások\GY\Beadandók\Bead02\Bookstore\BookStore.Persistence\obj\Debug\netstandard2.1\Bookstore.Persistence.AssemblyInfoInputs.cache
+D:\University\2020-2021_2\Webes Alkalmazások\GY\Beadandók\Bead02\Bookstore\BookStore.Persistence\obj\Debug\netstandard2.1\Bookstore.Persistence.AssemblyInfo.cs
+D:\University\2020-2021_2\Webes Alkalmazások\GY\Beadandók\Bead02\Bookstore\BookStore.Persistence\obj\Debug\netstandard2.1\Bookstore.Persistence.csproj.CoreCompileInputs.cache
+D:\University\2020-2021_2\Webes Alkalmazások\GY\Beadandók\Bead02\Bookstore\BookStore.Persistence\bin\Debug\netstandard2.1\Bookstore.Persistence.deps.json
+D:\University\2020-2021_2\Webes Alkalmazások\GY\Beadandók\Bead02\Bookstore\BookStore.Persistence\bin\Debug\netstandard2.1\Bookstore.Persistence.dll
+D:\University\2020-2021_2\Webes Alkalmazások\GY\Beadandók\Bead02\Bookstore\BookStore.Persistence\bin\Debug\netstandard2.1\Bookstore.Persistence.pdb
+D:\University\2020-2021_2\Webes Alkalmazások\GY\Beadandók\Bead02\Bookstore\BookStore.Persistence\obj\Debug\netstandard2.1\Bookstore.Persistence.dll
+D:\University\2020-2021_2\Webes Alkalmazások\GY\Beadandók\Bead02\Bookstore\BookStore.Persistence\obj\Debug\netstandard2.1\Bookstore.Persistence.pdb

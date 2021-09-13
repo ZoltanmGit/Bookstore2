@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Bookstore.Persistence.Models.Book>
+<!--@{
+    ViewData["Title"] = "Index";
+}-->
+<div>
+    <form asp-controller="Books" asp-action="Index" asp-route-bSortByPopular="@true" asp-route-pageParam="0" asp-route-pageOperation="Stay">
+        <input type="text" name="searchParam" style="width:90%" />
+        <input type="submit" value="Search" style="width:10%;float:right;" />
+    </form>
+</div>
+<table class="BookStoreTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ISBN)
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-bShouldSort="@true" asp-route-bSortByPopular="@false" asp-route-sortOrder="@ViewData["TitleSortParam"]" asp-route-pageParam="@ViewData["PageParam"]" asp-route-searchParam="@ViewData["SearchParam"]">Title</a>
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Published in
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(l => l.ElementAt(i).ISBN)
+                </td>
+                <td>
+                    @Html.DisplayFor(l => l.ElementAt(i).Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(l => l.ElementAt(i).Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(l => l.ElementAt(i).PublishDate)
+                </td>
+                <td>
+                    @if (Model.ElementAt(i).CoverImage != null)
+                    {
+                        <a asp-action="Details" asp-route-id="@Model.ElementAt(i).ISBN"><img src="@Url.Action("GetCoverImage", "Books", new { id = Model.ElementAt(i).ISBN })" class="CoverImage" /> </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@if ((int)ViewData["PageParam"] != 0)
+{
+    <a asp-action="Index" asp-route-pageParam="@ViewData["PageParam"]" asp-route-bShouldSort="@false" asp-route-bSortByPopular="@false" asp-route-sortOrder="@ViewData["TitleSortParam"]" asp-route-pageOperation="Prev" asp-route-searchParam="@ViewData["SearchParam"]" style="float:left">PREV</a>
+}
+
+@if ((int)ViewData["PageParam"] != (int)ViewData["MaxPageParam"]-1)
+{
+    <a asp-action="Index" asp-route-pageParam="@ViewData["PageParam"]" asp-route-bShouldSort="@false" asp-route-bSortByPopular="@false" asp-route-sortOrder="@ViewData["TitleSortParam"]" asp-route-pageOperation="Next" asp-route-searchParam="@ViewData["SearchParam"]" style="float:right">NEXT</a>
+}
+

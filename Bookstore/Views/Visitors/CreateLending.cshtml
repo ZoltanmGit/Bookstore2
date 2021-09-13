@@ -1,0 +1,32 @@
+﻿@model LendingViewModel
+<h2>Book a lending</h2>
+
+<div class="row">
+    <div class="col-md-5">
+        <form asp-controller="Visitors" asp-action="CreateLending" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="volumeID"></label>
+                <input type="number" asp-for="volumeID" class="form-control" />
+                <span asp-validation-for="volumeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="startDate"></label>
+                <input type="date" asp-for="startDate" class="form-control" />
+                <span asp-validation-for="startDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="endDate"></label>
+                <input type="date" asp-for="endDate" class="form-control" />
+                <span asp-validation-for="endDate" class="text-danger"></span>
+            </div>
+
+            <button class="btn btn-default" type="submit">Finish</button>
+        </form>
+    </div>
+</div>
+<a asp-action="Index" asp-controller="Books">Cancel</a>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<KeyValuePair<int, String>>
+
+@{
+    ViewData["Title"] = "Details";
+}
+<h1>Book Details</h1>
+
+<table class="BookStoreTable">
+    <thead>
+        <tr>
+            <th>
+                Volume
+            </th>
+            <th>
+                Lendings
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Key)
+            </td>
+            <td>
+                @Html.Raw(item.Value)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-action="Index">Back to Index</a> |
